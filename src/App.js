@@ -10,14 +10,15 @@ import { Route } from 'react-router-dom';
 class App extends Component {
   render() {
     return (
-      <div >
+      <div>
         <Layout>
           <Route path="/" exact component={BurgerBuilder} />
           <Route path="/checkout" component={Checkout} />
           <Route path="/orders" component={Orders} />
         </Layout>
       </div>
-    );}
+    );
+  }
 }
 
 export default App;
