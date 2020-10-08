@@ -10,24 +10,26 @@ const reducer = (state = initialState, action) => {
     case actionTypes.PURCHASE_BURGER_START:
       return {
         ...state,
-        loading: true
-      }
+        loading: true,
+      };
     case actionTypes.PURCHASE_BURGER_SUCCESS:
       const newOrder = {
         ...action.orderData,
-        id: action.orderId
-      }
+        id: action.orderId,
+      };
       return {
         ...state,
         loading: false,
-        orders: state.orders.concat(newOrder)
+        orders: state.orders.concat(newOrder),
       };
     case actionTypes.PURCHASE_BURGER_FAIL:
       return {
         ...state,
-        loading: false
+        loading: false,
       };
-    default: 
+    default:
       return state;
-    
+  }
 };
+
+export default reducer;
